@@ -1,170 +1,93 @@
-/* Top header (transparent with content) */
+/* Top header */
 .top-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 96%;
-    background: rgb(252, 252, 252);
-    color: #2a2020;
-    z-index: 20;
-    padding: 15px 30px;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 96%;
+  background: rgb(252, 252, 252);
+  color: #2a2020;
+  z-index: 20;
+  padding: 15px 30px;
+}
 
-  
-  .top-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .top-header .logo {
-    font-size: 22px;
-    font-weight:bold;
-  }
-  
-  .top-header .highlight {
-    color: #ffc107;
-  }
+.top-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.top-header .logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.top-header .highlight {
+  color: #ffc107;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: right;
+  color: #0f0d0d;
+  font-size: 14px;
+  gap: 20px;
+}
+
+.contact div {
+  display: flex;
+  align-items: center;
+}
+
+.contact i {
+  color: #ffc107;
+  margin-right: 5px;
+}
+
+@media (max-width: 768px) {
   .contact {
-    display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
-    color: #0f0d0d;
-    font-size: 14px;
-    gap: 5px;
+    align-items: flex-start;
+    text-align: left;
+    gap: 10px;
+  }
 }
-  
-  .contact div {
-    display: flex;
-    align-items: center;
-  }
-  
-  .contact i {
-    color: #ffc107; /* jaune */
-    margin-right: 5px;
-  }
-  
-  /* Transparent navbar below header */
-  .navbar {
-    position: absolute;
-    top: 56px;
-    left: 10;
-    width: 93%;
-    background: rgba(41, 41, 41, 0.941); /* semi-transparent */
-    padding: 15px 40px;
-    z-index: 9;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 40px; 
-    margin: 0;
-  }
-  
-  .nav-links li {
-    cursor: pointer;
-    color: #fff;
-    padding: 6px 12px;
-    transition: background 0.3s, color 0.3s;
-  }
-  
-  .nav-links .active {
-    background: #ffc107;
-    color: #000;
-    border-radius: 4px;
-  }
-  
-  /* Hero Section */
-  .hero {
-    background: url('R.jpeg');
-    height: 80vh;
-    color: #0d0b0b;
-    display: flex;
-    align-items: center;
-    padding-left: 50px;
-    position: relative;
-  }
-  
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6);
-  }
-  
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 500px;
-  }
-  
-  .hero h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-  }
-  
-  .hero .highlight {
-    color: #ffc107;
-  }
-  
-  .hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  .btn {
-    background: #ffc107;
-    color: #000;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
-    transition: background 0.3s, transform 0.3s;
-  }
-  .btn:hover {
-    background: #e0a800;
-    transform: scale(1.05);
+
+/* Navbar */
+.navbar {
+  position: absolute;
+  top: 56px;
+  left: 10px;
+  width: 93%;
+  background: rgba(41, 41, 41, 0.941);
+  padding: 15px 40px;
+  z-index: 9;
 }
-  
-  /* Why Choose Us */  .contact {
-      display: flex;
-      flex-direction: row; /* Aligne les éléments horizontalement par défaut */
-      align-items: center;
-      text-align: right;
-      color: #0f0d0d;
-      font-size: 14px;
-      gap: 20px; /* Espacement entre les éléments */
-  }
-  
-  .contact div {
-      display: flex;
-      align-items: center;
-  }
-  
-  .contact i {
-      color: #ffc107; /* Couleur jaune pour les icônes */
-      margin-right: 5px;
-  }
-  
-  /* Compatibilité mobile */
-  @media (max-width: 768px) {
-    .contact {
-      flex-direction: column; /* Aligne les éléments verticalement sur les petits écrans */
-      align-items: flex-start; /* Aligne les éléments à gauche */
-      text-align: left; /* Texte aligné à gauche */
-      gap: 10px; /* Augmente l'espacement entre les éléments */
-    }
-  }
-  .why-us {
-    padding: 40px 20px;
-    text-align: center;
-  }
-  
-  .why-us h2 {
-    font-size: 28px;
-    color: #080808;
-  }
-  
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+}
+
+.nav-links li {
+  cursor: pointer;
+  color: #fff;
+  padding: 6px 12px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-links .active {
+  background: #ffc107;
+  color: #000;
+  border-radius: 4px;
+}
+
+/* Hero Section */
+.hero {
+  background: url('R.jpeg');
+  height: 80vh;
+  color: #0d0b0b;
+  di
